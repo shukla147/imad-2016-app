@@ -13,6 +13,6 @@ button.onclick = function(){
         }
     };
     request.open('GET','http://shukla147.imad.hasura-app.io/counter ',true);
-    request,send(null);
+    request.send(null);
     
 };
