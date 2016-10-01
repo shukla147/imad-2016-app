@@ -4,7 +4,7 @@ button.onclick = function(){
     
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
-        if(request.readyState === XMLHttpRequest.DONE){
+        if(request.readyState === XMLHttpRequest.DONE)
             if(request.status === 200){
                 var counter = request.responseText;
                 var span = document.getElementById('count');
@@ -16,3 +16,19 @@ button.onclick = function(){
     request.send(null);
     
 };
+
+
+
+// sunbmit
+
+var nameInput = document.getElementById('name');
+var submit1 =document.getElementById('submit');
+submit1.onclick = functon(){
+    var name1 = ['name1','name2','name3'];
+    var list = '';
+    for (var i=0; i<name1.length;i++){
+        list += '<li>' + name1[i] + '</li>';
+    }
+    var ul =document.getElementById('namelist');
+    ul.innerHTML = list;
+}
