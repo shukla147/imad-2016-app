@@ -50,11 +50,11 @@ function remove() {
 function show() {
     var todos = get_todos();
  
-    var html = '<ol>';
+    
     for(var i=0; i<todos.length; i++) {
-        html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
+        html +=+ todos[i] + '<button class="remove" id="' + i  + '">x</button>';
     }
-    html += '</ul>';
+    
  
     document.getElementById('todos').innerHTML = html;
  
