@@ -50,7 +50,7 @@ function remove() {
 function show() {
     var todos = get_todos();
  
-    var html = '<ul>';
+    var html = '<ol>';
     for(var i=0; i<todos.length; i++) {
         html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
     }
