@@ -8,6 +8,9 @@ body {
     text-align: center;
 }
 
+.cemter img{
+     height: 200px;
+}
 .text-big {
     font-size: 300%;
 }
