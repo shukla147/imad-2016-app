@@ -61,7 +61,7 @@ function show() {
     var buttons = document.getElementsByClassName('remove');
     for (var i=0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', remove);
-    };
+    }
 }
  
 document.getElementById('add').addEventListener('click', add);
