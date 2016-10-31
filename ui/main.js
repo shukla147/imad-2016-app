@@ -15,21 +15,21 @@ window.onload = function(){
 
 // Todo code
 
-function get_todos() {
-    var todos = new Array;
-    var todos_str = localStorage.getItem('todo');
-    if (todos_str !== null) {
-        todos = JSON.parse(todos_str); 
+function get_todo() {
+    var todo = new Array;
+    var todo_str = localStorage.getItem('todo');
+    if (todo_str !== null) {
+        todo = JSON.parse(todo_str); 
     }
-    return todos;
+    return todo;
 }
  
 function add() {
     var task = document.getElementById('task').value;
  
-    var todos = get_todos();
-    todos.push(task);
-    localStorage.setItem('todo', JSON.stringify(todos));
+    var todo = get_todo();
+    todo.push(task);
+    localStorage.setItem('todo', JSON.stringify(todo));
  
     show();
  
@@ -38,9 +38,9 @@ function add() {
  
 function remove() {
     var id = this.getAttribute('id');
-    var todos = get_todos();
-    todos.splice(id, 1);
-    localStorage.setItem('todo', JSON.stringify(todos));
+    var todo = get_todo();
+    todo.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todo));
  
     show();
  
@@ -48,15 +48,15 @@ function remove() {
 }
  
 function show() {
-    var todos = get_todos();
+    var todo = get_todo();
  
     
-    for(var i=0; i<todos.length; i++) {
-        html +=+ todos[i] + '<button class="remove" id="' + i  + '">x</button>';
+    for(var i=0; i<todo.length; i++) {
+        html +=+ todos[i] + '<button class="remove" id="' + i  + '">X</button>';
     }
     
  
-    document.getElementById('todos').innerHTML = html;
+    document.getElementById('todo').innerHTML = html;
  
     var buttons = document.getElementsByClassName('remove');
     for (var i=0; i < buttons.length; i++) {
