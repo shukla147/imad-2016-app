@@ -16,11 +16,11 @@ app.get('/', function (req, res) {
 
 var names = [];
 app.get('/submit-name',function(req,res){
-        var name = req.query.name;
-        names.push(name);
-        res.send(JSON.stringify(names));
+   
+   var name = req.query.name;
+   names.push(name);
+   res.send(JSON.stringify(names));
 });
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
