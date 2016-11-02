@@ -17,6 +17,15 @@ window.onload = function(){
   };
 };
 
+// submit name code
+
+var nameInput = document.getElementById('name');
+var name= nameInput.value;
+var submit = getElementById("submit_btn");
+submit.onclick = function(){
+    
+};
+
 
 // Todo code
 function get_todos() {
