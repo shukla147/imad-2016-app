@@ -28,8 +28,8 @@ app.get('/counter', function(req,res){
 });
 
 var names = [];
-app.get('/submit-names/:name',function(req,res){
-        var name = req.params.name;
+app.get('/submit-names',function(req,res){
+        var name = req.query.name;
         names.push(name);
         res.send(JSON.stringify(names));
 });
