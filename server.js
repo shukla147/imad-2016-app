@@ -27,7 +27,7 @@ app.get('/counter', function(req,res){
     res.send(counter.toString());
 });
 
-app.get('/submit-namer:name', function(req,res){
+app.get('/submit-names:name', function(req,res){
     var name= req.param.name;
     name.push(name);
     //JSON
