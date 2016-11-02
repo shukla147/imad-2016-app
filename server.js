@@ -6,6 +6,14 @@ var app = express();
 app.use(morgan('combined'));
 
 
+
+
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+
 var names = [];
 app.get('/submit-names',function(req,res){
         var name = req.query.name;
@@ -13,10 +21,6 @@ app.get('/submit-names',function(req,res){
         res.send(JSON.stringify(names));
 });
 
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
