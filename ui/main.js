@@ -23,8 +23,17 @@ var nameInput = document.getElementById('name');
 var name= nameInput.value;
 var submit = getElementById("submit_btn");
 submit.onclick = function(){
-    
+    var name = ['name1','name2','name3'];
+    var list = '';
+    for(var i=0; i<name.length; i++){
+        list += '<li>' name[i] + '</li>';
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
 };
+
+
+
 
 
 // Todo code
