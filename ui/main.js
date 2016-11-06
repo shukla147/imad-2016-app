@@ -40,6 +40,8 @@ submit.onclick = function(){
             };
         }
     }
+    request.open('GET','http://shukla147.imad.hasura-app.io/submit-name?name' +name, true);
+    request.send(null);
 }
 
 // another part
