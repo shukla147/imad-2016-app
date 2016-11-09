@@ -1,4 +1,4 @@
-
+window.onload = function(){
 	var button = document.getElementById('counter');
 
   button.onclick = function(){
@@ -13,8 +13,9 @@
           }  
         };
         request.open('GET','http://shukla147.imad.hasura-app.io/counter',true);
-        
+        request.send(null);
   };
+ };
 
 
 // submit name code
