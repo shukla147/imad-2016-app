@@ -15,6 +15,7 @@ window.onload = function(){
     request.send(null);
   };
 
+//submit name code
 var submit = document.getElementById("submit_btn");
 submit.onclick = function(){
     var request = new XMLHttpRequest();
