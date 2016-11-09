@@ -19,7 +19,7 @@ window.onload = function(){
 
 // submit name code
 
-
+window.onload = function(){
 var submit = document.getElementById("submit_btn");
 submit.onclick = function(){
     var request = new XMLHttpRequest();
@@ -41,7 +41,7 @@ submit.onclick = function(){
     var name = nameInput.value;
     request.open('GET','http://shukla147.imad.hasura-app.io/submit-name?name='+name ,true);
     request.send(null);
-};
+};};
 
 
 
