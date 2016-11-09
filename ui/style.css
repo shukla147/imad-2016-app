@@ -1,34 +1,42 @@
 body {
-    font-family: sans-serif;
-    background-color:#F9E79F;
-    margin-top: 25px;
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+}
+p {font-size: 16px;}
+.margin {margin-bottom: 25px;}
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+.bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
 }
 
-.center {
-    text-align: center;
+ .bg-3{
+    background-color: #ffffff; /* White*/
+    color: #555555;
 }
 
-.cemter img{
-     height: 200px;
+.bg-4 {
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
 }
-.text-big {
-    font-size: 300%;
+.container-fluid {
+    padding-top: 40px;
+    padding-bottom: 70px;
 }
-
-.bold {
-    font-weight: bold;
+/*.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
 }
-
-.img-medium {
-    height: 200px;
-    width: auto;
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
 }
-
-.container{
-    max-width:800px;
-    margin: 0 auto;
-    font-family: sans-serif;
-    padding-top:60px;
-    padding-right:20px;
-    padding-left:20px;
-}
+*/
