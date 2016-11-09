@@ -45,7 +45,10 @@ submit.onclick = function(){
 
 
 
-
+var todo_app = document.getElementById("todo-app");
+todo_app.onclick = function(){
+    request.open('GET','http://shukla147.imad.hasura-app.io/todo-app',true);
+};
 
 
 
