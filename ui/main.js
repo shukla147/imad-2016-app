@@ -13,7 +13,7 @@
           }  
         };
         request.open('GET','http://shukla147.imad.hasura-app.io/counter',true);
-        request.send(null);
+        
   };
 
 
