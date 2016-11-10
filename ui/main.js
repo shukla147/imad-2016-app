@@ -52,8 +52,7 @@ function get_todos() {
     }
     return todos;
 }
-document.getElementById('add').addEventListener('click', add);
-show();
+
 
 function add() {
     var task = document.getElementById('task').value;
@@ -91,5 +90,6 @@ function remove() {
 
     return false;
 }
-
+document.getElementById('add').addEventListener('click', add);
+show();
 };
