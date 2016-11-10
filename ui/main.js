@@ -71,7 +71,6 @@ function show() {
     }
     html += '</ul>';
     document.getElementById('todos').innerHTML = html;
-
     var buttons = document.getElementsByClassName('remove');
     for (var j=0; j < buttons.length; j++) {
         buttons[i].addEventListener('click', remove);
