@@ -45,7 +45,7 @@ submit.onclick = function(){
 // TODO app 
 
 function get_todos() {
-    var todos = new Array();
+    var todos = new Array;
     var todos_str = localStorage.getItem('todo');
     if (todos_str !== null) {
         todos = JSON.parse(todos_str); 
@@ -74,7 +74,7 @@ function show() {
     document.getElementById('todos').innerHTML = html;
     var buttons = document.getElementsByClassName('remove');
     for (var j=0; j < buttons.length; j++) {
-        buttons[i].addEventListener('click', remove);
+        buttons[j].addEventListener('click', remove);
     }
 }
 
