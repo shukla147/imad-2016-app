@@ -12,7 +12,7 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+//counter app
 var counter = 0;
 
 app.get('/counter', function(req,res){
@@ -20,6 +20,7 @@ app.get('/counter', function(req,res){
     res.send(counter.toString());
 });
 
+// add name app
 var names = [];
 app.get('/submit-name',function(req,res){
    
