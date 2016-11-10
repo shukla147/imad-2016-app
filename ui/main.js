@@ -61,7 +61,7 @@ function add() {
     todos.push(task);
     localStorage.setItem('todo', JSON.stringify(todos));
     show();
-    return false;
+  
 }
 
 function show() {
