@@ -39,7 +39,7 @@ submit.onclick = function(){
     request.send(null);
 };
 
-
+};
 //Code for TODO app
 
 function get_todos() {
@@ -93,7 +93,6 @@ function show() {
 
 document.getElementById('add').addEventListener('click', add);
 show();
-};
 
 
 
