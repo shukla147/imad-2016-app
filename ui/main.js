@@ -77,6 +77,9 @@ function show() {
     }
 }
 
+document.getElementById('add').addEventListener('click', add);
+show();
+
 function remove() {
     var id = this.getAttribute('id');
     var todos = get_todos();
@@ -87,7 +90,5 @@ function remove() {
 
     return false;
 }
-document.getElementById('add').addEventListener('click', add);
-show();
 
 };
