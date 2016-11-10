@@ -68,7 +68,7 @@ function show() {
 
     var html = '<ul>';
     for(var i=0; i<todos.length; i++) {
-        html += '<li>' + todos[i] + '  <button class="remove" style="margin:5px;float:center;height:20px;background-color:red;border-radius:30px;" id=" ' + i + ' "></button></li>';
+        html += '<li>' + todos[i] + '  <button class="remove" style="margin:5px;float:center;height:20px;background-color:red;border-radius:50px;" id=" ' + i + ' "></button></li>';
     }
     html += '</ul>';
     document.getElementById('todos').innerHTML = html;
