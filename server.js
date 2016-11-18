@@ -85,7 +85,6 @@ var blogs = {
                </div>
            </div>
     <script type="text/javascript" src="/ui/main.js"></script>
-        </script>
        </body>
     </html>
 
