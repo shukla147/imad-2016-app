@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var blogs = {
  blog1 : {
      title : 'First blog, Ankit Shukla',
-     heading : 'Defeating Dimensions',
+     heading : 'Journey started',
      date: 'September 1,2016',
      content :`  `
  },
@@ -40,7 +40,7 @@ function createTemplate (data){
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
         </head>
-       <body bgcolor=PINK>
+       <body>
 
            <div class="container">
                <div>
