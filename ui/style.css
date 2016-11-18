@@ -23,6 +23,11 @@ p {font-size: 16px;}
     background-color: #2f2f2f; /* Black Gray */
     color: #fff;
 }
+.bg-5 {
+    background-color: #FAD7A0; /* Green */
+    color: #ffffff;
+}
+
 .container-fluid {
     padding-top: 40px;
     padding-bottom: 70px;
