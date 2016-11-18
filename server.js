@@ -10,19 +10,24 @@ var blogs = {
      title : 'First blog, Ankit Shukla',
      heading : 'Journey started',
      date: 'September 1,2016',
-     content :`  `
+     content :`This is my first blog This is my first blogThis is my first blogThis is my first blogThis is my first blog
+     This is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blog
+     This is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blog This is my first blogThis is my first blogThis is my first blog.`
  },
  blog2 : {
      title : 'Second blog,  Ankit Shukla',
      heading : 'Mid of the course',
      date: 'October 5,2016',
-     content :`       `
+     content :`  This is my second blog This is my second blogThis is my second blogThis is my second blogThis is my second blogThis is my second blogThis is my second blog This is my second blogThis is my second blogThis is my second blogThis is my second blog
+     This is my second blogThis is my second blogThis is my second blogThis is my second blog
+     This is my second blogThis is my second blogThis is my second blogThis is my second blogThis is my second blog
+     This is my second blogThis is my second blogThis is my second blogThis is my second blogThis is my second blog`
  },
  blog3 : {
     title : 'Third blog, Ankit Shukla',
      heading : 'End of the course',
      date: 'October 23,2016',
-     content :`  `     
+     content :`  This is my third blog This is my third blogThis is my third blogThis is my third blogThis is my third blogThis is my third blog This is my third blogThis is my third blog This is my third blogThis is my third blog This is my third blog This is my third blog This is my third blogThis is my third blogThis is my third blogThis is my third blog This is my third blogThis is my third blogThis is my third blog This is my third blog  This is my third blog This is my third blog vThis is my third blog This is my third blog This is my third blog This is my third blog`     
  }
 };
 
@@ -54,7 +59,7 @@ function createTemplate (data){
                      <div>
                         <p> ${date}</p>
                      </div>
-                     <div>
+                     <div class="blogs">
                          ${content}
                      </div>
                      
