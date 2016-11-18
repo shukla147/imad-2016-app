@@ -57,9 +57,7 @@ function createTemplate (data){
                      <div>
                          ${content}
                      </div>
-                     <div class="footer">
-                        <button id="likebutton">Like</button><span id="likes"> 0 </span> Likes!
-                     </div>
+                     
                </div>
            </div>
     <script type="text/javascript" src="/ui/main.js"></script>
