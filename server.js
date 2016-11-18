@@ -40,7 +40,7 @@ function createTemplate (data){
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
         </head>
-       <body style:"'color:#aaaaaa;'">
+       <body color:black>
 
            <div class="container">
                <div>
