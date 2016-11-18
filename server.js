@@ -5,12 +5,85 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var blogs = {
+ blog1 : {
+     title : 'First blog, Ankit Shukla',
+     heading : 'Defeating Dimensions',
+     date: 'September 1,2016',
+     content :`  `
+ },
+ blog2 : {
+     title : 'Second blog,  Ankit Shukla',
+     heading : 'Mid of the course',
+     date: 'October 5,2016',
+     content :`       `
+ },
+ blog3 : {
+    title : 'Third blog, Ankit Shukla',
+     heading : 'End of the course',
+     date: 'October 23,2016',
+     content :`  `     
+ }
+};
+
+
+function createTemplate (data){
+     var title= data.title;
+     var heading= data.heading;
+     var date= data.date;
+     var content= data.content;
+     var htmlTemplate = `
+     <html>
+      <head>
+        <title>
+           ${title}
+        </title>
+        <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+       <body bgcolor=PINK>
+
+           <div class="container">
+               <div>
+                   <a href="/"><b>Home</b></a>
+               </div>
+               <hr/>
+               <div>
+                   <h1><center>${heading}</center></h1>
+               </div>
+               <div class="container1" >
+                     <div>
+                        <p> ${date}</p>
+                     </div>
+                     <div>
+                         ${content}
+                     </div>
+                     <div class="footer">
+                        <button id="likebutton">Like</button><span id="likes"> 0 </span> Likes!
+                     </div>
+               </div>
+           </div>
+    <script type="text/javascript" src="/ui/main.js"></script>
+        </script>
+       </body>
+    </html>
+
+     `;
+     return htmlTemplate;
+};
+
+
 
 
 
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+// blog 
+app.get('/:blogNo', function(req, res) {
+    var blogNo= req.params.blogNo;
+    res.send(createTemplate(blogs[blogNo]));
 });
 //counter app
 var counter = 0;
