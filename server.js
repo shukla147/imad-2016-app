@@ -19,18 +19,25 @@ it's a cinch. `
  },
  blog2 : {
      title : 'Second blog,  Ankit Shukla',
-     heading : 'Mid of the course',
+     heading : 'The Bumblebee',
      date: 'October 5,2016',
-     content :`  This is my second blog This is my second blogThis is my second blogThis is my second blogThis is my second blogThis is my second blogThis is my second blog This is my second blogThis is my second blogThis is my second blogThis is my second blog
-     This is my second blogThis is my second blogThis is my second blogThis is my second blog
-     This is my second blogThis is my second blogThis is my second blogThis is my second blogThis is my second blog
-     This is my second blogThis is my second blogThis is my second blogThis is my second blogThis is my second blog`
+     content :`  According to scientists, the bumblebee's body is too heavy and its wing span too small. Aerodynamically, the bumblebee cannot fly. But the bumblebee doesn't know that and it keeps flying.
+
+When you don't know your limitations, you go out and surprise yourself. In hindsight, you wonder if you had any limitations. The only limitations a person has are those that are self-imposed. Don't let education put limitations on you.`
  },
  blog3 : {
     title : 'Third blog, Ankit Shukla',
-     heading : 'End of the course',
+     heading : 'The Elephant Rope',
      date: 'October 23,2016',
-     content :`  This is my third blog This is my third blogThis is my third blogThis is my third blogThis is my third blogThis is my third blog This is my third blogThis is my third blog This is my third blogThis is my third blog This is my third blog This is my third blog This is my third blogThis is my third blogThis is my third blogThis is my third blog This is my third blogThis is my third blogThis is my third blog This is my third blog  This is my third blog This is my third blog vThis is my third blog This is my third blog This is my third blog This is my third blog`     
+     content :` As a man was passing the elephants, he suddenly stopped, confused by the fact that these huge creatures were being held by only a small rope tied to their front leg. No chains, no cages. It was obvious that the elephants could, at anytime, break away from their bonds but for some reason, they did not.
+
+He saw a trainer nearby and asked why these animals just stood there and made no attempt to get away. “Well,” trainer said, “when they are very young and much smaller we use the same size rope to tie them and, at that age, it’s enough to hold them. As they grow up, they are conditioned to believe they cannot break away. They believe the rope can still hold them, so they never try to break free.”
+
+The man was amazed. These animals could at any time break free from their bonds but because they believed they couldn’t, they were stuck right where they were.
+
+Like the elephants, how many of us go through life hanging onto a belief that we cannot do something, simply because we failed at it once before?
+
+Failure is part of learning; we should never give up the struggle in life. `
  }
 };
 
