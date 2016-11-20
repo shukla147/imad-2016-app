@@ -15,10 +15,10 @@ down the road, barking and trying to overtake it. One day a neighbor asked the f
 catch a car?" The farmer replied, "That is not what bothers me. What bothers me is what he would do if he ever caught one." 
 Many people in life behave like that dog who is pursuing meaningless goals.
 
-<br/>
-Life is hard by the yard, <br/>
-but by the inch, <br/>
-it's a cinch. `
+<pre>
+Life is hard by the yard, 
+but by the inch, 
+it's a cinch. </pre>`
  },
  blog2 : {
      title : 'Second blog,  Ankit Shukla',
@@ -76,7 +76,7 @@ function createTemplate (data){
                         <p> ${date}</p>
                      </div>
                      <div class="blogs">
-                        <pre> ${content}</pre>
+                         ${content}
                      </div>
                      
                </div>
