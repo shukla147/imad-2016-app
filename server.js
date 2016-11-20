@@ -8,11 +8,14 @@ app.use(morgan('combined'));
 var blogs = {
  blog1 : {
      title : 'First blog, Ankit Shukla',
-     heading : 'Everyone Has a Story in Life',
+     heading : 'MEANINGLESS GOALS',
      date: 'September 1,2016',
-     content :`This is my first blog This is my first blogThis is my first blogThis is my first blogThis is my first blog
-     This is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blog
-     This is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blog This is my first blogThis is my first blogThis is my first blog.`
+     content :`A farmer had a dog who used to sit by the roadside waiting for vehicles to come around. As soon as one came he would run down the road, barking and trying to overtake it. One day a neighbor asked the farmer "Do you think your dog is ever going to catch a car?" The farmer replied, "That is not what bothers me. What bothers me is what he would do if he ever caught one." Many people in life behave like that dog who is pursuing meaningless goals.
+
+
+Life is hard by the yard, 
+but by the inch, 
+it's a cinch. `
  },
  blog2 : {
      title : 'Second blog,  Ankit Shukla',
