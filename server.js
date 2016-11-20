@@ -11,9 +11,9 @@ var blogs = {
      heading : 'MEANINGLESS GOALS',
      date: 'September 1,2016',
      content :`A farmer had a dog who used to sit by the roadside waiting for vehicles to come around. As soon as one came he would run 
-     down the road, barking and trying to overtake it. One day a neighbor asked the farmer "Do you think your dog is ever going to catch a
-     car?" The farmer replied, "That is not what bothers me. What bothers me is what he would do if he ever caught one." Many people in
-     life behave like that dog who is pursuing meaningless goals.
+down the road, barking and trying to overtake it. One day a neighbor asked the farmer "Do you think your dog is ever going to catch a
+car?" The farmer replied, "That is not what bothers me. What bothers me is what he would do if he ever caught one." Many people in
+life behave like that dog who is pursuing meaningless goals.
 
 
 Life is hard by the yard, 
@@ -25,25 +25,25 @@ it's a cinch. `
      heading : 'The Bumblebee',
      date: 'October 5,2016',
      content :` According to scientists, the bumblebee's body is too heavy and its wing span too small. Aerodynamically, the bumblebee
-     cannot fly. But the bumblebee doesn't know that and it keeps flying.
-     When you don't know your limitations, you go out and surprise yourself. In hindsight, you wonder if you had any limitations. The only
-     limitations a person has are those that are self-imposed. Don't let education put limitations on you.`
+cannot fly. But the bumblebee doesn't know that and it keeps flying.
+When you don't know your limitations, you go out and surprise yourself. In hindsight, you wonder if you had any limitations. The only
+limitations a person has are those that are self-imposed. Don't let education put limitations on you.`
  },
  blog3 : {
     title : 'Third blog, Ankit Shukla',
      heading : 'The Elephant Rope',
      date: 'October 23,2016',
      content :` As a man was passing the elephants, he suddenly stopped, confused by the fact that these huge creatures were being held by
-     only a small rope tied to their front leg. No chains, no cages. It was obvious that the elephants could, at anytime, break away from
-     their bonds but for some reason, they did not.
-     He saw a trainer nearby and asked why these animals just stood there and made no attempt to get away. trainer said, when they are
-     very young and much smaller we use the same size rope to tie them and, at that age, it's enough to hold them. As they grow up, they
-     are conditioned to believe they cannot break away. They believe the rope can still hold them, so they never try to break free 
-     The man was amazed. These animals could at any time break free from their bonds but because they believed they couldn't, they were
-     stuck right where they were.
-     Like the elephants, how many of us go through life hanging onto a belief that we cannot do something, simply because we failed at it
-     once before?
-        Failure is part of learning; we should never give up the struggle in life. `
+only a small rope tied to their front leg. No chains, no cages. It was obvious that the elephants could, at anytime, break away from
+their bonds but for some reason, they did not.
+He saw a trainer nearby and asked why these animals just stood there and made no attempt to get away. trainer said, when they are
+very young and much smaller we use the same size rope to tie them and, at that age, it's enough to hold them. As they grow up, they
+are conditioned to believe they cannot break away. They believe the rope can still hold them, so they never try to break free 
+The man was amazed. These animals could at any time break free from their bonds but because they believed they couldn't, they were
+stuck right where they were.
+Like the elephants, how many of us go through life hanging onto a belief that we cannot do something, simply because we failed at it
+once before?
+    Failure is part of learning; we should never give up the struggle in life. `
  }
 };
 
