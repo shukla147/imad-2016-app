@@ -99,11 +99,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-// blog 
-app.get('/:blogNo', function(req, res) {
-    var blogNo= req.params.blogNo;
-    res.send(createTemplate(blogs[blogNo]));
-});
 //counter app
 var counter = 0;
 
@@ -111,6 +106,13 @@ app.get('/counter', function(req,res){
     counter = counter + 1;
     res.send(counter.toString());
 });
+
+// blog 
+app.get('/:blogNo', function(req, res) {
+    var blogNo= req.params.blogNo;
+    res.send(createTemplate(blogs[blogNo]));
+});
+
 
 // add name app
 var names = [];
