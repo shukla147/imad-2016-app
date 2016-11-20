@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var blogs = {
  blog1 : {
      title : 'First blog, Ankit Shukla',
-     heading : 'Journey started',
+     heading : 'Everyone Has a Story in Life',
      date: 'September 1,2016',
      content :`This is my first blog This is my first blogThis is my first blogThis is my first blogThis is my first blog
      This is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blogThis is my first blog
