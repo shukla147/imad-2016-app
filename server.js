@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var Pool = require('pg').Pool;
+/*var Pool = require('pg').Pool;
 
 var config = {
   host: 'db.imad.hasura-app.io',
@@ -10,7 +10,7 @@ var config = {
   user: 'shukla147',
   password: process.env.DB_PASSWORD,
   database: 'shukla147',
-};
+};*/
 
 var app = express();
 app.use(morgan('combined'));
@@ -60,7 +60,7 @@ var blogs = {
  }
 };
  function createTemplate(data){
-     //var title= data.title;
+     var title= data.title;
      var heading= data.heading;
      var date= data.date;
      var content= data.content;
@@ -109,7 +109,7 @@ app.get('/', function (req, res) {
 });
 
 
-var pool= new Pool(config);
+/*var pool= new Pool(config);
 app.get('/about',function(req,res){
     pool.query('SELECT * FROM test',function(err,result){
         if(!err){
@@ -119,7 +119,7 @@ app.get('/about',function(req,res){
         }
     });  
 });
-
+*/
 app.get('/ui/about.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about.html'));
 });
