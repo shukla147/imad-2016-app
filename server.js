@@ -61,7 +61,7 @@ var blogs = {
 };
 
 
- function createTemplate(data){
+ function createTemplate (data){
      var title= data.title;
      var heading= data.heading;
      var date= data.date;
@@ -74,13 +74,11 @@ var blogs = {
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
         </head>
-       <body bgcolor=PINK>
+       <body>
 
            <div class="container">
                <div>
-                   <a href="/">
-                    <b><button>Home</button></b>
-                   </a>
+                   <a href="/"><b>Home</b></a>
                </div>
                <hr/>
                <div>
@@ -90,15 +88,13 @@ var blogs = {
                      <div>
                         <p> ${date}</p>
                      </div>
-                     <div>
+                     <div class="blogs">
                          ${content}
                      </div>
-                     <div class="footer">
-                        <button id="likebutton">Like</button><span id="likes"> 0 </span> Likes!
-                     </div>
+                     
                </div>
            </div>
-        <script type="text/javascript" src="/ui/main.js">
+    <script type="text/javascript" src="/ui/main.js"></script>
         </script>
        </body>
     </html>
@@ -106,6 +102,8 @@ var blogs = {
      `;
      return htmlTemplate;
 }
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
