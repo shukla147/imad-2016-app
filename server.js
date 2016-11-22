@@ -121,13 +121,16 @@ app.get('/about',function(req,res){
         }
     });  
 });
-
+*/
+app.get('/ui/about.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+});
 
 var counter=0;
 app.get('/counter', function (req,res) {
    counter=counter+1;
    res.send(counter.toString());
-});*/
+});
 app.get('/:blogNo', function(req, res) {
     var blogNo= req.params.blogNo;
     res.send(createTemplate(blogs[blogNo]));
