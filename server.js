@@ -263,14 +263,14 @@ app.get('/counter', function(req,res){
 
 app.get('/articles/:blogNo', function(req, res) {
     var blogNo= req.params.blogNo;
-    pool.query("SELECT * from article where title='"+req.params.blogNo+"'" ,function(err,result){
+    pool.query("SELECT * from article where title="+req.params.blogNo,function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } else{
            if(result.length.rows === 0){
                res.status(404).send('Article Not Found');
            }else{
-               var articleData = result.row[0];
+                var articleData = result.rows[0];
                 res.send(createTemplate(blogs[blogNo]));
            }
        }
