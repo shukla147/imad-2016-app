@@ -263,7 +263,7 @@ app.get('/counter', function(req,res){
 
 app.get('/articles/:blogNo', function(req, res) {
     var blogNo= req.params.blogNo;
-    pool.query("SELECT * from article WHERE title="+req.params.blogNo,function(err,result){
+    pool.query("SELECT * from article WHERE title='"+req.params.blogNo+"'",function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } else{
