@@ -41,6 +41,7 @@ var blogs = {
               </p>` 
  }
 };
+
 function createTemplate (data){
      var title= data.title;
      var heading= data.heading;
@@ -83,12 +84,16 @@ function createTemplate (data){
      return htmlTemplate;
 }
 
-app.get('/ui/about.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
-}); 
+ 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+app.get('/ui/about.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+});
+
+
 
 var pool = new Pool(config);
 app.get('/blogs/:blogNo', function(req, res) {
