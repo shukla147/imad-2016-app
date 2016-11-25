@@ -238,7 +238,7 @@ app.get('/blogs/:blogNo', function(req, res) {
    
 });
 
-//db
+/*db
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     pol.query("SELECT * FROM test",function(err,result){
@@ -249,7 +249,7 @@ app.get('/test-db',function(req,res){
        }
     });
 });
-
+*/
 
 // add name app
 var names = [];
