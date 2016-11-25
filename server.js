@@ -1,6 +1,14 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').Pool;
+var config = {
+  host: 'db.imad.hasura-app.io',
+  port:'5432',
+  user: 'shukla147',
+  password: process.env.DB_PASSWORD,
+  database: 'shukla147',
+};
 
 var app = express();
 app.use(morgan('combined'));
@@ -9,27 +17,27 @@ var blogs = {
      title : 'Blog 1 | Reshma Suresh',
      heading : 'Defeating Dimensions',
      date: 'November 1,2016',
-     content :`
-             <p>  Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here  Content HerevContent Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v v Content Here
+     content :` 
+             <p>  Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here  Content HerevContent Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v v Content Here 
+              
               </p>`
  },
  blog2 : {
      title : 'Blog 2 | Reshma Suresh',
      heading : 'Eternal Love',
      date: 'November 5,2016',
-     content :`
-             <p>  Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here  Content HerevContent Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v v Content Here
-              </p>
-             `
+     content :` 
+             <p>  Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here  Content HerevContent Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v v Content Here 
+              </p>`
  },
  blog3 : {
     title : 'Blog 3 | Reshma Suresh',
      heading : 'Get Back Up!',
      date: 'November 10,2016',
-     content :`
-             <p>  Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here  Content HerevContent Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v v Content Here
-              </p>
-            `
+     content :` 
+             <p>  Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here  Content HerevContent Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v Content Here Content Here Content Here Content Here Content Here Content Here Content Here v v v Content Here 
+             
+              </p>` 
  }
 };
  function createTemplate (data){
@@ -43,12 +51,15 @@ var blogs = {
         <title>
            ${title}
         </title>
+        <link href="/ui/style.css" rel="stylesheet" />
         </head>
        <body bgcolor=PINK>
-
+         
            <div class="container">
                <div>
-                   <a href="/"><b>Home</b></a>
+                   <a href="/">
+                    <b><button>Home</button></b>
+                   </a>
                </div>
                <hr/>
                <div>
@@ -62,50 +73,58 @@ var blogs = {
                          ${content}
                      </div>
                      <div class="footer">
-                        <button id="likebutton">Like</button><span id="like"> 0 </span> Likes!
+                        <button id="likebutton">Like</button><span id="likes"> 0 </span> Likes!
                      </div>
                </div>
            </div>
-           <script type="text/javascript" src="/ui/main.js"></script>
+        <script type="text/javascript" src="/ui/main.js">
         </script>
        </body>
     </html>
-
+    
      `;
      return htmlTemplate;
 }
-
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+var pool= new Pool(config);
+app.get('/test-db', function(req, res) {
+    pool.query('SELECT * FROM test', function(err, result) {
+        if(err){
+            res.status(500).send(err.toString());
+        } 
+        else {
+            res.send(JSON.stringify(result));
+        }
+    });
+});
+var counter=0;
+app.get('/counter', function (req,res) {
+   counter=counter+1;
+   res.send(counter.toString());
 });
 app.get('/:blogNo', function(req, res) {
     var blogNo= req.params.blogNo;
     res.send(createTemplate(blogs[blogNo]));
 });
-/*app.get('/test-db', function(req, res) {
-
-});*/
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+app.get('/ui/about.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+});
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
-/*var counter=0;
-app.get('/counter', function (req,res) {
-   counter=counter+1;
-   res.send(counter.toString());
-});*/
-
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+
 
 /*
 var express = require('express');
