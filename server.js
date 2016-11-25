@@ -237,7 +237,7 @@ app.get('/blogs/:blogNo', function(req, res) {
        }
     });
    counter1 += 1;
-   res.send(counter.toString());
+   res.send(counter1.toString());
 });
 
 /*db
