@@ -12,6 +12,7 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
+
 var blogs = {
  blog1 : {
      title : 'Blog 1 | Reshma Suresh',
