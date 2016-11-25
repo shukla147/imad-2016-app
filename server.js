@@ -42,7 +42,7 @@ var blogs = {
  }
 };
  function createTemplate (data){
-var title= data.title;
+var title1= data.title;
      var heading= data.heading;
      var date= data.date;
      var content= data.content;
@@ -50,7 +50,7 @@ var title= data.title;
      <html>
       <head>
         <title>
-           ${title}
+           ${title1}
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
         </head>
