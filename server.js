@@ -261,9 +261,21 @@ app.get('/counter', function(req,res){
 // blog 
 
 
-app.get('/:blogNo', function(req, res) {
+app.get('/articles/:blogNo', function(req, res) {
     var blogNo= req.params.blogNo;
-    res.send(createTemplate(blogs[blogNo]));
+    pool.query("SELECT * from article where title=" + req.params.blogNo,function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       } else{
+           if(result.length.rows === 0){
+               res.status(404).send('Article Not Found');
+           }else{
+               var articleData = result.rows[0];
+                res.send(createTemplate(blogs[blogNo]));
+           }
+       }
+    });
+   
 });
 
 //db
