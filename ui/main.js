@@ -1,4 +1,6 @@
-window.onload = function(){
+
+
+/*window.onload = function(){
   var button = document.getElementById('counter');
   button.onclick = function(){
     var request = new XMLHttpRequest();
@@ -92,5 +94,5 @@ function remove() {
 }
 document.getElementById('add').addEventListener('click', add);
 show();
-};
+};*/
 
