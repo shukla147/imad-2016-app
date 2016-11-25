@@ -94,10 +94,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/ui/about.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
-});
-
 var pool = new Pool(config);
 app.get('/blogs/:blogNo', function(req, res) {
     var blogNo= req.params.blogNo;
