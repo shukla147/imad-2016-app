@@ -87,7 +87,7 @@ app.get('/submit-name',function(req,res){
 
 // blog 
 
-var counter1 = 0;
+
 var pool = new Pool(config);
 app.get('/blogs/:blogNo', function(req, res) {
     var blogNo= req.params.blogNo;
@@ -103,8 +103,7 @@ app.get('/blogs/:blogNo', function(req, res) {
            }
        }
     });
-   counter1 += 1;
-   res.send(counter1.toString());
+
 });
 
 /*db
