@@ -34,7 +34,7 @@ function createTemplate (data){
 
            <div class="container">
                <div>
-                   <a href="/"><b>Home</b></a>
+                   <a href="/"><right><b>Home</b></right></a>
                </div>
                <hr/>
                <div>
