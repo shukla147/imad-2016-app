@@ -224,7 +224,7 @@ function createTemplate (data){
                </div>
                <div class="container1" >
                      <div>
-                         ${date.toDateString()}
+                         ${date}
                      </div>
                      <div class="blogs">
                          ${content}
