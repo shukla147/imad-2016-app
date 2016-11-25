@@ -1,4 +1,4 @@
-/*var express = require('express');
+*var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
@@ -97,15 +97,21 @@ app.get('/', function (req, res) {
 app.get('/ui/about.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about.html'));
 });
-var pool= new Pool(config);
-app.get('/test-db', function(req, res) {
-    pool.query('SELECT * FROM test', function(err, result) {
-        if(err){
-            res.status(200).send(err.toString());
-        } 
-        else {
-            res.send(JSON.stringify(result));
-        }
+
+var pool = new Pool(config);
+app.get('/blogs/:blogNo', function(req, res) {
+    var blogNo= req.params.blogNo;
+    pool.query("SELECT * from article WHERE title='"+req.params.blogNo+"'",function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       } else{
+           if(result.rows.length === 0){
+               res.status(404).send('Article Not Found');
+           }else{
+                var articleData = result.rows[0];
+                res.send(createTemplate(articleData));
+           }
+       }
     });
 });
 var counter=0;
@@ -139,7 +145,7 @@ app.listen(8080, function () {
 });
 
 
-*/
+/*
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
@@ -251,7 +257,7 @@ app.get('/test-db',function(req,res){
        }
     });
 });
-*/
+
 
 // add name app
 var names = [];
@@ -282,3 +288,4 @@ var port = 8080; // Use 8080 for local development because you might already hav
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+*/
