@@ -16,6 +16,9 @@ window.onload = function(){
     request.open('GET','http://shukla147.imad.hasura-app.io/counter',true);
     request.send(null);
   };
+  
+  
+  var button1 = document.getElementById('view');
 
 //submit name code
 var submit = document.getElementById("submit_btn");
