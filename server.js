@@ -37,8 +37,8 @@ function createTemplate (data){
                    <a href="/"><b style="float:right;">Home</b></h4></a>
                </div>
                
-               <div>
-                   <h1><center style="color:#aaaaaa;">${heading}</center></h1>
+               <div class="heading">
+                   <h1><center>${heading}</center></h1>
                </div>
                <div class="container1" >
                      <div>
