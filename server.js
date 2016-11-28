@@ -32,7 +32,7 @@ function createTemplate (data){
         </head>
        <body>
 
-           <div class="container">
+           <div class="container-fluid">
                <div>
                    <a href="/"><b style="float:right;">Home</b></h4></a>
                </div>
