@@ -49,8 +49,8 @@ function createTemplate (data){
                      </div>
                      
                </div>
-                <div>
-            <p style="color:'black';">Total blog view is <span id='view'>0</span></p>
+                <div class="blog-footer">
+            <p>Total blog view is <span id='view'>0</span></p>
            </div>
            </div>
           
