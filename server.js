@@ -63,11 +63,7 @@ function createTemplate (data){
      return htmlTemplate;
 }
 
-var view = 0;
-app.get('/blogs/:blogNo', function(req,res){
-    view += 1;
-    res.send(view.toString());
-});
+
 
 
 
@@ -126,6 +122,11 @@ app.get('/test-db',function(req,res){
     });
 });
 */
+var view = 0;
+app.get('/blogs/:blogNo', function(req,res){
+    view += 1;
+    res.send(view.toString());
+});
 
 // add name app
 var names = [];
