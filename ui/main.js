@@ -18,7 +18,6 @@ window.onload = function(){
   };
   
   
-  var button1 = document.getElementById('view');
 
 //submit name code
 var submit = document.getElementById("submit_btn");
