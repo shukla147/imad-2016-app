@@ -63,7 +63,11 @@ function createTemplate (data){
      return htmlTemplate;
 }
 
-
+var view = 0;
+app.get('/blogs/:blogNo', function(req,res){
+    view += 1;
+    res.send(view.toString());
+});
 
 
 
