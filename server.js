@@ -38,7 +38,7 @@ function createTemplate (data){
                </div>
                
                <div>
-                   <h1><center>${heading}</center></h1>
+                   <h1><center style="color:#aaaaaa;">${heading}</center></h1>
                </div>
                <div class="container1" >
                      <div>
