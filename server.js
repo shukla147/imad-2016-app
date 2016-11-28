@@ -49,9 +49,7 @@ function createTemplate (data){
                      </div>
                      
                </div>
-                <div class="blog-footer">
-            <p>Total blog view is <span id='view'>0</span></p>
-           </div>
+            
            </div>
           
     <script type="text/javascript" src="/ui/main.js"></script>
@@ -122,11 +120,6 @@ app.get('/test-db',function(req,res){
     });
 });
 */
-var view = 0;
-app.get('/blogs/:blogNo', function(req,res){
-    view += 1;
-    res.send(view.toString());
-});
 
 // add name app
 var names = [];
