@@ -50,6 +50,9 @@ function createTemplate (data){
                      
                </div>
            </div>
+           <div class="footer">
+            <p>Total blog view is <span id='view'>0</span></p>
+           </div>
     <script type="text/javascript" src="/ui/main.js"></script>
         </script>
        </body>
